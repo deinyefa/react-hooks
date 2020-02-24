@@ -1,7 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 import UseStateHook from "./UseStateHook";
+import UseEffectHook from "./UseEffectHook";
+import Example from "./ClassicalCompnent";
 
 function App() {
   return (
@@ -20,7 +22,11 @@ function App() {
           Learn React
         </a>
       </header>
-      <UseStateHook/>
+      <Example/>
+      <hr/>
+      <UseStateHook />
+      <hr />
+      <UseEffectHook />
     </div>
   );
 }
