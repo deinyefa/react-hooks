@@ -31,7 +31,7 @@ export default () => {
 
   useEffect(() => {
     const id = setInterval(() => {
-      setCount(count + 1);
+      setCount(c => c + 1);
       console.log("setting count in interval")
     }, 1000);
     return () => clearInterval(id);
