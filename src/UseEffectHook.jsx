@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-export default () => {
+export default ({ name = "Jess" }) => {
   const initialState = "redux";
   const [count, setCount] = useState(0);
   const [data, updateData] = useState({ hits: [] });
@@ -15,27 +15,27 @@ export default () => {
       updateData(result.data);
     };
     fetchData();
-  }, [query]);
-
-//   useEffect(() => {
-//     setTimeout(() => {
-//       console.log(`You clicked ${count} time(s)`);
-//     }, 3000);
-//   }, [count]);
+  }, []);
 
   useEffect(() => {
-    const docTitle = `Hello ${initialState}`;
+    setTimeout(() => {
+      console.log(`You clicked ${count} time(s)`);
+    }, 3000);
+  });
+
+  useEffect(() => {
+    const docTitle = `Hello ${name}`;
     document.title = docTitle;
     console.log(`setting document title to ${docTitle}`);
-  }, [initialState]);
+  }, [name]);
 
-  useEffect(() => {
-    const id = setInterval(() => {
-      setCount(c => c + 1);
-      console.log("setting count in interval")
-    }, 1000);
-    return () => clearInterval(id);
-  }, []);
+  //   useEffect(() => {
+  //     const id = setInterval(() => {
+  //       setCount(c => c + 1);
+  //       console.log("setting count in interval")
+  //     }, 1000);
+  //     return () => clearInterval(id);
+  //   }, []);
 
   return (
     <>
