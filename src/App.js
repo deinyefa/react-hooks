@@ -4,6 +4,8 @@ import "./App.css";
 import UseStateHook from "./UseStateHook";
 import UseEffectHook from "./UseEffectHook";
 import Example from "./ClassicalCompnent";
+import UseReducerEffect from "./UseReducerEffect";
+import Charting from "./Charting";
 
 function App() {
   return (
@@ -22,11 +24,15 @@ function App() {
           Learn React
         </a>
       </header>
-      <Example/>
-      <hr/>
+      <Charting />
+      <hr />
+      <Example />
+      <hr />
       <UseStateHook />
       <hr />
       <UseEffectHook />
+      <hr />
+      <UseReducerEffect />
     </div>
   );
 }
